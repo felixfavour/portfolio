@@ -27,7 +27,7 @@
     max-height: 100vh;
   }
   .container {
-    padding: 0 10vw;
+    padding: 0 15vw;
   }
   .ellipse {
     position: absolute;

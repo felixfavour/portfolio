@@ -39,7 +39,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     display: flex;
-    padding: 0 10vw;
+    /* padding: 0 10vw; */
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -48,6 +48,7 @@ export default {
   }
   .footer-socials {
     flex-basis: 40%;
+    padding-left: 10vw;
     justify-content: space-between;
   }
   .footer-socials img {
@@ -57,7 +58,8 @@ export default {
   .footer-contact {
     flex-basis: 60%;
     display: flex;
-    justify-content: end;
+    padding-right: 10vw;
+    justify-content: flex-end;
   }
   .footer-contact a {
     color: #000;
