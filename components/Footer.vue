@@ -35,7 +35,7 @@ export default {
 <style scoped>
   .footer-container {
     background: #FFE5BD;
-    height: 60px;
+    height: 8vh;
     justify-content: space-between;
     align-items: center;
     display: flex;
@@ -53,7 +53,7 @@ export default {
   }
   .footer-socials img {
     width: 30px;
-    margin-right: 12px;
+    margin-right: 24px;
   }
   .footer-contact {
     flex-basis: 60%;

@@ -43,7 +43,7 @@ export default {
 <style scoped>
   .header-container {
     background: #FFF;
-    height: 100px;
+    height: 12vh;
     justify-content: space-between;
     align-items: center;
     display: flex;
@@ -96,26 +96,5 @@ export default {
   } */
   .action a span {
     margin-left: 4px;
-  }
-
-  /* Animations */
-
-  @keyframes fadein {
-    0% {
-      opacity: 0;
-      transform: translateX(-10vw);
-      -webkit-transform: translateX(-10vw);
-      -moz-transform: translateX(-10vw);
-      -ms-transform: translateX(-10vw);
-      -o-transform: translateX(-10vw);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0vw);
-      -webkit-transform: translateX(0vw);
-      -moz-transform: translateX(0vw);
-      -ms-transform: translateX(0vw);
-      -o-transform: translateX(0vw);
-    }
   }
 </style>

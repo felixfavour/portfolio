@@ -20,7 +20,7 @@ export default {
 .quote-purger-container {
   background: #DE8500;
   color: #FFF;
-  height: 36px;
+  height: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;

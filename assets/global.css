@@ -20,3 +20,24 @@ body {
   border-radius: 10px;
   background-color: #DE8500;
 }
+
+/* Animations */
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    -o-transform: translateY(5px);
+  }
+    100% {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+}
