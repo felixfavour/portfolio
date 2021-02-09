@@ -1,0 +1,22 @@
+@import url('http://fonts.cdnfonts.com/css/graphik');
+
+body {
+  margin: 0;
+  font-family: 'Graphik', sans-serif;
+}
+
+/* Scroll bar custom styling */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #DE8500;
+}
