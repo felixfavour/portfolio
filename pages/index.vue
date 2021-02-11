@@ -23,6 +23,7 @@
         </div>
       </div>
       <div class="image">
+        <div class="personal-image-sill" />
         <div class="personal-image" />
       </div>
     </div>
@@ -87,11 +88,28 @@ export default {}
   flex-basis: 45%;
 }
 .banner .personal-image {
-  border: 10px solid #000000;
-  width: 520px;
-  height: 520px;
+  width: 550px;
+  position: absolute;
+  height: 550px;
   background: url('~assets/bitmaps/banner-2-min.png') no-repeat;
+  filter: drop-shadow(0px 38px 56px rgba(0, 0, 0, 0.25));
+}
+.banner .personal-image-sill {
+  width: 550px;
+  height: 550px;
+  background: url('~assets/bitmaps/banner-2-sill.png') no-repeat;
   box-sizing: border-box;
   filter: drop-shadow(0px 38px 56px rgba(0, 0, 0, 0.25));
+  transform: translate(-35px, 10px);
+  animation: reveal 1s forwards;
+}
+
+@keyframes reveal {
+  from {
+    transform: translate(-35px, 10px);
+  }
+  to {
+    transform: translate(-95px, 10px);
+  }
 }
 </style>

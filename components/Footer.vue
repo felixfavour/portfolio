@@ -15,9 +15,12 @@
       </a>
     </div>
     <div class="footer-contact">
-      <a href="/">
+      <nuxt-link v-if="$route.name.includes('stories')" to="/">
+        Return to Home
+      </nuxt-link>
+      <nuxt-link v-else to="/stories">
         Read my stories
-      </a>
+      </nuxt-link>
       <div class="bar" />
       <a href="mailto:felixfavour0@gmail.com">
         felixfavour0@gmail.com

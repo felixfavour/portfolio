@@ -3,19 +3,19 @@
     <div class="logo" />
     <div class="nav-actions">
       <div class="action">
-        <nuxt-link to="/">
+        <nuxt-link :class="($route.name === 'index' ? 'active' : '')" to="/">
           Home
         </nuxt-link>
         <div class="bar home" />
       </div>
       <div class="action">
-        <nuxt-link to="/">
+        <nuxt-link :class="($route.name === 'about' ? 'active' : '')" to="/about">
           About Me
         </nuxt-link>
         <div class="bar about" />
       </div>
       <div class="action">
-        <nuxt-link to="/">
+        <nuxt-link :class="($route.name === 'fieldtrips' ? 'active' : '')" to="/fieldtrips">
           Field Trips
         </nuxt-link>
         <div class="bar trips" />
@@ -88,6 +88,10 @@ export default {
     border-radius: 16px;
   }
   .action a:hover + .bar {
+    display: block;
+    transition: .4s;
+  }
+  .action a.active + .bar {
     display: block;
     transition: .4s;
   }

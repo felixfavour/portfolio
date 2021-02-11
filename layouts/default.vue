@@ -25,30 +25,61 @@
   .body {
     /* height: 100vh; */
     max-height: 100vh;
+    max-width: 100vw;
   }
   .container {
     padding: 0 10vw;
   }
   .ellipse {
+    display: none;
+    top: 0%;
+    opacity: 0.6;
+    left: 0%;
     position: absolute;
     overflow: hidden;
-    /* animation: gallavant 5s forwards; */
+    height: 100vh;
+    width: 100vw;
   }
-  .ellipse.two {
-    top: 20%;
-    right: 0;
+  .ellipse.one img {
+    width: 300px;
+    /* background: #000; */
+    animation: gallavant 10s forwards infinite;
   }
   .ellipse.two img {
-    width: 500px;
-    /* animation: gallavant 5s forwards; */
+    width: 300px;
+    animation: gallavant 10s forwards infinite;
   }
 
   @keyframes gallavant {
-    from {
-      transform: translateX(0px);
+    0% {
+      margin-left: 0px;
+      margin-top: 0px;
+      transform: scale(1.5);
     }
-    to {
-      transform: translateX(300px);
+    30% {
+      margin-left: 100px;
+      margin-top: 200px;
+      transform: scale(1);
+    }
+    50% {
+      margin-left: 100px;
+      margin-top: 400px;
+      transform: scale(1.5);
+    }
+    75% {
+      margin-left: 300px;
+      margin-top: 200px;
+      transform: scale(1);
+    }
+    75% {
+      margin-left: 300px;
+      margin-top: 500px;
+      transform: scale(2.5);
+    }
+    100% {
+      margin-left: 0px;
+      margin-top: 0px;
+      transform: scale(1.5);
     }
   }
 </style>
