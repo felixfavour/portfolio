@@ -16,7 +16,7 @@
             <div class="text">
               Say Hello!
             </div>
-            <div class="span material-icons">
+            <div class="material-icons">
               arrow_forward
             </div>
           </button>
@@ -35,6 +35,16 @@ export default {}
 </script>
 
 <style scoped>
+button {
+  cursor: pointer;
+  transition: .4s;
+}
+.material-icons {
+  transition: .4s;
+}
+button .text:hover + .material-icons {
+  transform: translate(10px, 0);
+}
 .home-container {
   height: 80vh;
 }
