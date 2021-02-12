@@ -67,10 +67,11 @@ export default {
    overflow-y: scroll;
  }
  .content-header {
-    margin-top: 28px;
+    margin-top: 36px;
+    margin-bottom: 16px;
     font-style: normal;
     font-weight: 500;
-    font-size: 21px;
+    font-size: 32px;
     line-height: 23px;
  }
  .content-body {
