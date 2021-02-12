@@ -1,5 +1,7 @@
 @import url('http://fonts.cdnfonts.com/css/graphik');
-
+* {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: 'Graphik', sans-serif;
@@ -8,6 +10,7 @@ body {
 /* Scroll bar custom styling */
 ::-webkit-scrollbar {
   width: 4px;
+  height: 4px;
 }
 
 ::-webkit-scrollbar-track {
