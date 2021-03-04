@@ -2,16 +2,16 @@
   <div class="home-container">
     <div class="banner">
       <div class="text">
-        <div class="text-1">
+        <div class="text text-1 fadein">
           Hello, I am
         </div>
-        <div class="text-2">
+        <div :visibility="texts[0] !== undefined" class="text text-2 fadein">
           Favour Felix
         </div>
-        <div class="text-2 below">
+        <div :visibility="texts[1] !== undefined" class="text text-2 fadein below">
           I enjoy building software.
         </div>
-        <div class="text-3">
+        <div :visibility="texts[2] !== undefined" class="text text-3 fadein">
           Helping people with efficient and intuitive computer software has always been the dream. These days I live 'the dream' at <a target="blank" href="http://acumen.digital">Acumen Digital</a>
         </div>
         <div class="button">
@@ -34,7 +34,24 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data () {
+    return {
+      texts: []
+    }
+  },
+  mounted () {
+    console.log(this.texts[0])
+    // this.textSequentialAnimator()
+  },
+  methods: {
+    textSequentialAnimator () {
+      window.setInterval(() => {
+        this.texts.push(1)
+      }, 800)
+    }
+  }
+}
 </script>
 
 <style scoped>
@@ -51,6 +68,16 @@ export default {}
   flex-direction: column;
   justify-content: center;
   flex-basis: 50%;
+}
+.banner > .text > .text {
+  opacity: 0;
+}
+.banner > .text > .text[visibility = "true"] {
+  visibility: visible;
+}
+.banner > .text > .text[visibility = "false"] {
+  visibility: hidden;
+  color: pink;
 }
 .banner > .image {
   margin-top: 100px;
@@ -116,7 +143,7 @@ button {
 }
 .material-icons {
   position: absolute;
-  top: 60px;
+  top: 62px;
   right: 26px;
   transition: .4s;
 }

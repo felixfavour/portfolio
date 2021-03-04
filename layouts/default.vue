@@ -1,27 +1,56 @@
 <template>
   <div class="body">
-    <QuotePurger v-if="false" />
-    <Header />
-    <div class="ellipse one">
-      <img src="~assets/bitmaps/ellipse1.png">
+    <div v-if="!isLoading" class="main">
+      <QuotePurger v-if="false" />
+      <Header class="fadedown" />
+      <div class="ellipse one">
+        <img src="~assets/bitmaps/ellipse1.png">
+      </div>
+      <div class="ellipse two">
+        <img src="~assets/bitmaps/ellipse2.png">
+      </div>
+      <!-- <div class="ellipse three">
+        <img src="~assets/bitmaps/ellipse1.png">
+      </div>
+      <div class="ellipse four">
+        <img src="~assets/bitmaps/ellipse2.png">
+      </div> -->
+      <div class="container">
+        <Nuxt />
+      </div>
+      <Footer class="fadein" />
     </div>
-    <div class="ellipse two">
-      <img src="~assets/bitmaps/ellipse2.png">
+    <div v-else class="loader">
+      <div :class="'logo fadein ' + (exiting ? 'zoomout' : '')" />
     </div>
-    <!-- <div class="ellipse three">
-      <img src="~assets/bitmaps/ellipse1.png">
-    </div>
-    <div class="ellipse four">
-      <img src="~assets/bitmaps/ellipse2.png">
-    </div> -->
-    <div class="container">
-      <Nuxt />
-    </div>
-    <Footer />
   </div>
 </template>
 
-<style>
+<script>
+export default {
+  data () {
+    return {
+      isLoading: true,
+      exiting: false
+    }
+  },
+  mounted () {
+    this.loadingTimer()
+  },
+  methods: {
+    loadingTimer () {
+      window.setTimeout(() => {
+        this.isLoading = false
+      }, 2000)
+      window.setTimeout(() => {
+        this.exiting = true
+      }, 1500)
+    }
+  }
+}
+</script>
+
+<style scoped>
   .body {
     /* height: 100vh; */
     max-height: 100vh;
@@ -48,6 +77,19 @@
   .ellipse.two img {
     width: 300px;
     animation: gallavant 10s forwards infinite;
+  }
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .logo {
+    height: 50px;
+    width: 160px;
+    justify-content: flex-start;
+    background: url('~assets/bitmaps/header-logo.png') no-repeat left;
   }
 
   @keyframes gallavant {
