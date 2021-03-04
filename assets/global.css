@@ -5,6 +5,7 @@
 body {
   margin: 0;
   font-family: 'Graphik', sans-serif;
+  background-color: #FFDEAC;
 }
 
 /* Scroll bar custom styling */
@@ -17,6 +18,10 @@ body {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .page-enter-active,

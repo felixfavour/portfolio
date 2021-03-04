@@ -37,7 +37,7 @@ export default {
 
 <style scoped>
   .footer-container {
-    background: #FFE5BD;
+    background-color: #FFDEAC;
     height: 8vh;
     justify-content: space-between;
     align-items: center;
@@ -78,5 +78,35 @@ export default {
     border-radius: 18px;
     transform: rotate(-1.82deg);
     margin: 0 16px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .footer-socials {
+      padding-left: 5vw;
+    }
+    .footer-contact {
+      padding-right: 5vw;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .footer-container {
+      flex-direction: column;
+      height: 10vh;
+    }
+    .footer-socials {
+      padding: 8px 0;
+      padding-top: 16px;
+    }
+    .footer-socials img {
+      width: 20px;
+      margin-right: 24px;
+    }
+    .footer-contact {
+      padding: 8px 0;
+    }
+    .footer-contact a {
+      font-size: 15px;
+    }
   }
 </style>

@@ -190,6 +190,9 @@ export default {
     margin-right: 36px;
     animation: fromright .5s forwards;
   }
+  .field .ft-card img {
+    width: 400px;
+  }
   .ft-card .role {
     margin-top: 24px;
     font-style: normal;
@@ -222,5 +225,24 @@ export default {
     to {
       transform: translate(0px, 0);
     }
+  }
+
+  @media screen and (max-width: 1024px) {
+  .move.right {
+    right: 2vw;
+  }
+  .move.left {
+    left: 2vw;
+  }
+  .field {
+    width: 90vw;
+  }
+  .field .ft-card {
+    width: 300px;
+    margin-right: 20px;
+  }
+  .field .ft-card img {
+    width: 300px;
+  }
   }
 </style>

@@ -42,7 +42,7 @@ export default {
 
 <style scoped>
   .header-container {
-    background: #FFF;
+    background-color: #FFDEAC;
     height: 12vh;
     justify-content: space-between;
     align-items: center;
@@ -50,7 +50,6 @@ export default {
     padding: 0 10vw;
   }
   .logo {
-    width: 10px;
     height: 50px;
     flex-basis: 30%;
     justify-content: flex-start;
@@ -100,5 +99,19 @@ export default {
   } */
   .action a span {
     margin-left: 4px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .header-container {
+      flex-direction: column;
+      padding: 0 5vw;
+    }
+    .logo {
+      width: 100%;
+      flex-basis: 100%;
+    }
+    .nav-actions {
+      flex-direction: column;
+    }
   }
 </style>

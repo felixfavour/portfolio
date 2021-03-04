@@ -82,4 +82,10 @@
       transform: scale(1.5);
     }
   }
+
+  @media screen and (max-width: 1024px) {
+    .container {
+      padding: 0 5vw;
+    }
+  }
 </style>

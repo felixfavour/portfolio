@@ -2,9 +2,9 @@
   <div class="about-container">
     <div class="image">
       <div class="ndubuisi" />
-      <div class="content-body">
+      <!-- <div class="content-body">
         I tried modelling the guy in the <b>homepage</b> into some caricature.
-      </div>
+      </div> -->
     </div>
     <div class="content">
       <div class="content-header">
@@ -81,4 +81,59 @@ export default {
     font-size: 18px;
     line-height: 35px;
  }
+
+  @media screen and (max-width: 1024px) {
+    /* .image {
+      flex-basis: 30%;
+    } */
+    .ndubuisi {
+      margin-top: 10vh;
+      width: 230px;
+      height: 230px;
+      background: url('~assets/bitmaps/ndubuisi.png') no-repeat;
+      background-size: cover;
+      border: 7px solid;
+    }
+    .image .content-body {
+      width: 230px;
+    }
+    .image img {
+      width: 100%;
+    }
+    .content-header {
+        margin-top: 36px;
+        margin-bottom: 16px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 23px;
+    }
+    .content-body {
+        margin-top: 8px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 35px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .image {
+      flex-basis: 30%;
+    }
+    .ndubuisi {
+      margin-top: 10vh;
+      width: 180px;
+      height: 180px;
+      background: url('~assets/bitmaps/ndubuisi.png') no-repeat;
+      background-size: cover;
+      border: 7px solid;
+    }
+    .image .content-body {
+      width: 180px;
+    }
+    .image img {
+      width: 100%;
+    }
+  }
 </style>
