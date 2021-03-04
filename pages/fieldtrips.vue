@@ -1,11 +1,12 @@
 <template>
   <div class="ft-container">
     <div class="ft-header">
+      <div :class="'active-state ' + mode" />
       <button :class="(mode === 'wf' ? 'active' : '')" @click="mode = 'wf'">
-        Work Field
+        Work
       </button>
       <button :class="'second ' + (mode === 'vf' ? 'active' : '')" @click="mode = 'vf'">
-        Volunteering Field
+        Projects
       </button>
     </div>
     <div class="ft-body">
@@ -131,8 +132,28 @@ export default {
 
 <style scoped>
   .ft-header {
+    position: relative;
     margin-top: 24px;
     height: 100px;
+  }
+  .active-state.wf {
+    width: 150px;
+    height: 50px;
+    background: #DE8500;
+    border-radius: 24px;
+    position: absolute;
+    z-index: -1;
+    transition: .3s;
+  }
+  .active-state.vf {
+    width: 150px;
+    height: 50px;
+    background: #DE8500;
+    border-radius: 24px;
+    position: absolute;
+    z-index: -1;
+    transition: .3s;
+    transform: translateX(186px);
   }
   .ft-header button {
     margin-right: 36px;
@@ -140,13 +161,15 @@ export default {
     font-weight: 500;
     font-size: 21px;
     line-height: 23px;
+    height: 50px;
+    width: 150px;
     transition: .4s;
     outline: none;
     background-color: transparent;
     border: none;
     cursor: pointer;
   }
-  .ft-header button.active {
+  /* .ft-header button.active {
     background: #DE8500;
     border-radius: 42px;
     padding: 8px 32px;
@@ -157,7 +180,7 @@ export default {
     border-radius: 42px;
     padding: 8px 32px;
     animation: fromleft .5s forwards;
-  }
+  } */
   .field {
     display: -moz-box;
     display: -webkit-box;

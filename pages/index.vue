@@ -12,7 +12,7 @@
           I enjoy building software.
         </div>
         <div class="text-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ipsam doloremque veritatis incidunt repellat deserunt delectus! Alias reiciendis quidem aut.
+          Helping people with efficient and intuitive computer software has always been the dream. These days I live 'the dream' at <a target="blank" href="http://acumen.digital">Acumen Digital</a>
         </div>
         <div class="button">
           <button>
@@ -53,6 +53,7 @@ export default {}
   flex-basis: 50%;
 }
 .banner > .image {
+  margin-top: 100px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -91,11 +92,16 @@ export default {}
   margin-top: 0;
   color: #9E5F00;
 }
+.text a {
+  color: #9E5F00;
+  text-decoration: none;
+  font-weight: bold;
+}
 .text-3 {
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  width: 400px;
+  width: 500px;
   line-height: 33px;
 }
 button {
@@ -118,7 +124,7 @@ button:hover + .material-icons {
   transform: translate(10px, 0);
 }
 .banner button {
-  margin-top: 5vh;
+  margin-top: 50px;
   display: flex;
   justify-content: left;
   padding-left: 24px;

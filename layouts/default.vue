@@ -1,6 +1,6 @@
 <template>
   <div class="body">
-    <QuotePurger />
+    <QuotePurger v-if="false" />
     <Header />
     <div class="ellipse one">
       <img src="~assets/bitmaps/ellipse1.png">

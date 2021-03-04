@@ -21,6 +21,13 @@
         <div class="bar trips" />
       </div>
       <div class="action">
+        <a href="https://stories.favourfelix.com">
+          My Stories
+          <span class="material-icons">call_made</span>
+        </a>
+        <div class="bar trips" />
+      </div>
+      <div class="action">
         <a style="color: #DE8500" href="/">
           CV / Resume
           <span class="material-icons">cloud_download</span>
@@ -56,7 +63,7 @@ export default {
     background: url('~assets/bitmaps/header-logo.png') no-repeat left;
   }
   .nav-actions {
-    flex-basis: 40%;
+    flex-basis: 50%;
     display: flex;
     align-items: center;
     justify-content: space-between;
