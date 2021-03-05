@@ -2,7 +2,8 @@
   <div class="body">
     <div v-if="!isLoading" class="main">
       <QuotePurger v-if="false" />
-      <Header class="fadedown" />
+      <Header v-if="screenWidth > 1024" class="fadedown" />
+      <MobileHeader v-if="screenWidth <= 1024" class="fadedown" />
       <div class="ellipse one">
         <img src="~assets/bitmaps/ellipse1.png">
       </div>
@@ -31,10 +32,12 @@ export default {
   data () {
     return {
       isLoading: true,
-      exiting: false
+      exiting: false,
+      screenWidth: 768
     }
   },
   mounted () {
+    this.onResize()
     this.loadingTimer()
   },
   methods: {
@@ -45,6 +48,11 @@ export default {
       window.setTimeout(() => {
         this.exiting = true
       }, 1500)
+    },
+    onResize () {
+      window.addEventListener('resize', () => {
+        this.screenWidth = window.screen.availWidth
+      })
     }
   }
 }
@@ -58,6 +66,7 @@ export default {
   }
   .container {
     padding: 0 10vw;
+    height: 76vh;
   }
   .ellipse {
     display: none;
