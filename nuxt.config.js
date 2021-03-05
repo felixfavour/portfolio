@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'portfolio',
+    title: 'Favour Felix',
     htmlAttrs: {
       lang: 'en'
     },
@@ -26,6 +26,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: '~/plugins/firebase', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

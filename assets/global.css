@@ -54,6 +54,10 @@ body {
   animation: zoomout .5s forwards;
   -webkit-animation: zoomout .5s forwards;
 }
+.zoomin {
+  animation: zoomin .5s forwards;
+  -webkit-animation: zoomin .5s forwards;
+}
 
 @keyframes fadein {
   0% {
@@ -126,4 +130,40 @@ body {
     -ms-transform: scale(2);
     -o-transform: scale(2);
 }
+}
+@keyframes zoomin {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+}
+    100% {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+}
+
+@keyframes fromright {
+  from {
+    transform: translate(60px, 0);
+  }
+  to {
+    transform: translate(0px, 0);
+  }
+}
+
+@keyframes fromleft {
+  from {
+    transform: translate(-60px, 0);
+  }
+  to {
+    transform: translate(0px, 0);
+  }
 }

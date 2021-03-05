@@ -1,16 +1,16 @@
 <template>
   <div class="footer-container">
     <div class="footer-socials">
-      <a href="/">
+      <a target="_blank" href="https://github.com/felixfavour">
         <img src="~assets/icons/github.svg" alt="">
       </a>
-      <a href="/">
+      <a target="_blank" href="https://linkedin.com/in/favour-felix-81b074b3/">
         <img src="~assets/icons/linkedin.svg" alt="">
       </a>
-      <a href="/">
+      <a target="_blank" href="https://stackoverflow.com/users/11257434/favour-felix-chinemerem">
         <img src="~assets/icons/so.svg" alt="">
       </a>
-      <a href="/">
+      <a target="_blank" href="https://dribbble.com/raphfelix">
         <img src="~assets/icons/dribble.svg" alt="">
       </a>
     </div>
@@ -35,13 +35,13 @@ export default {
 
 <style scoped>
   .footer-container {
-    background-color: #FFDEAC;
     height: 8vh;
     justify-content: space-between;
     align-items: center;
     display: flex;
     /* padding: 0 10vw; */
     position: fixed;
+    z-index: -1;
     width: 100%;
     bottom: 0;
     right: 0;
@@ -98,13 +98,14 @@ export default {
     }
     .footer-socials img {
       width: 20px;
-      margin-right: 24px;
-    }
-    .footer-contact {
-      padding: 8px 0;
+      margin: 0 12px;
     }
     .footer-contact a {
       font-size: 15px;
+      display: none;
+    }
+    .bar {
+      display: none;
     }
   }
 </style>

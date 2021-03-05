@@ -136,7 +136,7 @@ export default {
     margin-top: 24px;
     height: 100px;
   }
-  .active-state.wf {
+  .active-state {
     width: 150px;
     height: 50px;
     background: #DE8500;
@@ -153,7 +153,7 @@ export default {
     position: absolute;
     z-index: -1;
     transition: .3s;
-    transform: translateX(186px);
+    transform: translateX(190px);
   }
   .ft-header button {
     margin-right: 36px;
@@ -188,6 +188,7 @@ export default {
     overflow-x: auto;
   }
   .move {
+    animation: zoomin .5s forwards;
     position: absolute;
     z-index: 1;
     margin-top: 140px;
@@ -211,7 +212,7 @@ export default {
     width: 400px;
     height: 410px;
     margin-right: 36px;
-    animation: fromright .5s forwards;
+    animation: fromright 1s forwards;
   }
   .field .ft-card img {
     width: 400px;
@@ -232,24 +233,6 @@ export default {
     color: #DE8500;
   }
 
-  @keyframes fromright {
-    from {
-      transform: translate(60px, 0);
-    }
-    to {
-      transform: translate(0px, 0);
-    }
-  }
-
-  @keyframes fromleft {
-    from {
-      transform: translate(-60px, 0);
-    }
-    to {
-      transform: translate(0px, 0);
-    }
-  }
-
   @media screen and (max-width: 1024px) {
   .move.right {
     right: 2vw;
@@ -267,5 +250,29 @@ export default {
   .field .ft-card img {
     width: 300px;
   }
+  }
+
+  @media screen and (max-width: 768px) {
+    .ft-header button  {
+      font-size: 17px;
+    }
+    .active-state, .ft-header button {
+      width: 120px;
+    }
+    .active-state.vf {
+      transform: translateX(146px);
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    .ft-header button  {
+      font-size: 15px;
+    }
+    .active-state, .ft-header button {
+      width: 100px;
+    }
+    .active-state.vf {
+      transform: translateX(116px);
+    }
   }
 </style>

@@ -12,7 +12,7 @@
           I enjoy building software.
         </div>
         <div :visibility="texts[2] !== undefined" class="text text-3 fadein">
-          Helping people with efficient and intuitive computer software has always been the dream. These days I live 'the dream' at <a target="blank" href="http://acumen.digital">Acumen Digital</a>
+          Helping people with efficient and intuitive computer software has always been the dream. These days I live 'the dream' at <a target="_blank" href="http://acumen.digital">Acumen Digital</a>
         </div>
         <div class="button">
           <button>
@@ -41,7 +41,7 @@ export default {
     }
   },
   mounted () {
-    console.log(this.texts[0])
+    // console.log(this.texts[0])
     // this.textSequentialAnimator()
   },
   methods: {
@@ -146,6 +146,7 @@ button {
   top: 62px;
   right: 26px;
   transition: .4s;
+  color: #9E5F00;
 }
 button:hover + .material-icons {
   transform: translate(10px, 0);
@@ -157,9 +158,10 @@ button:hover + .material-icons {
   padding-left: 24px;
   align-items: center;
   font-size: 18px;
-  border: 2px solid;
+  border: 2px solid #9E5F00;
+  color: #9E5F00;
   font-weight: 700;
-  background: #DE8500;
+  background: transparent;
   width: 190px;
   height: 50px;
 }
@@ -177,32 +179,131 @@ button:hover + .material-icons {
 .text-1 {
   font-style: normal;
   font-weight: 300;
-  font-size: 26px;
+  font-size: 18px;
   line-height: 40px;
 }
 .text-2 {
-  margin: 12px 0;
+  margin: 0;
   font-style: normal;
   font-weight: 500;
   font-size: 44px;
-  line-height: 70px;
+  font-size: 34px;
+  line-height: 55px;
+}
+.text-2.below {
+  margin-top: 0;
 }
 .text-3 {
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 16px;
   width: 400px;
   line-height: 33px;
 }
-  .banner .personal-image {
-    width: 450px;
-    height: 450px;
-    background-size: cover;
-  }
-  .banner .personal-image-sill {
-    width: 450px;
-    height: 450px;
-    background-size: cover;
-  }
+.button .text {
+  font-size: 15px;
+}
+.banner .personal-image {
+  width: 250px;
+  height: 370px;
+  background-size: cover;
+  z-index: -1
+}
+.banner .personal-image-sill {
+  width: 250px;
+  height: 370px;
+  background-size: cover;
+  z-index: -1;
+}
+}
+
+@media screen and (max-width: 768px) {
+.banner {
+  flex-direction: column;
+}
+.banner .image {
+  margin: 0;
+}
+.text-1 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 40px;
+}
+.text-2 {
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 44px;
+  font-size: 34px;
+  line-height: 55px;
+}
+.text-2.below {
+  margin-top: 0;
+}
+.text-3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  width: 400px;
+  line-height: 33px;
+}
+.button .text {
+  font-size: 15px;
+}
+.banner .personal-image {
+  width: 250px;
+  height: 370px;
+  background-size: cover;
+  z-index: -1
+}
+.banner .personal-image-sill {
+  width: 250px;
+  height: 370px;
+  background-size: cover;
+  z-index: -1;
+}
+}
+
+@media screen and (max-width: 500px) {
+.banner {
+  flex-direction: column;
+}
+.banner .text {
+  margin: auto 0;
+  justify-content: center;
+}
+.banner .image {
+  display: none;
+}
+.text-1 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 40px;
+}
+.text-2 {
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 55px;
+}
+.text-2.below {
+  margin-top: 0;
+}
+.text-3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  width: 300px;
+  line-height: 33px;
+}
+.banner button {
+  margin-top: 24px;
+}
+.banner .material-icons {
+  top: 37px;
+}
 }
 </style>

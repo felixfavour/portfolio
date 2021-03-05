@@ -1,13 +1,13 @@
 import firebase from 'firebase/app'
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyCfKFzFdiYOnoKdY9Cr7G9MLuNYHL85Gaw',
-  authDomain: 'texem-messaging.firebaseapp.com',
-  projectId: 'texem-messaging',
-  storageBucket: 'texem-messaging.appspot.com',
-  messagingSenderId: '384733073640',
-  appId: '1:384733073640:web:50b6987f153135aa80b95d',
-  measurementId: 'G-7MYSVDBJDX'
+  apiKey: 'AIzaSyAh4s9j6jNpLUeucbDSZrUKuWuJNTlZK1o',
+  authDomain: 'favour-portfolio.firebaseapp.com',
+  projectId: 'favour-portfolio',
+  storageBucket: 'favour-portfolio.appspot.com',
+  messagingSenderId: '524056389368',
+  appId: '1:524056389368:web:af9cbe0d817c877cb27d0d',
+  measurementId: 'G-Y8YVRD558S'
 }
 
 firebase.initializeApp(firebaseConfig)
