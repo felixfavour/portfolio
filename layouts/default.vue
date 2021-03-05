@@ -1,62 +1,133 @@
 <template>
-  <div>
-    <Nuxt />
+  <div class="body">
+    <div v-if="!isLoading" class="main">
+      <QuotePurger v-if="false" />
+      <Header class="fadedown" />
+      <div class="ellipse one">
+        <img src="~assets/bitmaps/ellipse1.png">
+      </div>
+      <div class="ellipse two">
+        <img src="~assets/bitmaps/ellipse2.png">
+      </div>
+      <!-- <div class="ellipse three">
+        <img src="~assets/bitmaps/ellipse1.png">
+      </div>
+      <div class="ellipse four">
+        <img src="~assets/bitmaps/ellipse2.png">
+      </div> -->
+      <div class="container">
+        <Nuxt />
+      </div>
+      <Footer class="fadein" />
+    </div>
+    <div v-else class="loader">
+      <div :class="'logo fadein ' + (exiting ? 'zoomout' : '')" />
+    </div>
   </div>
 </template>
 
-<style>
-html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+<script>
+export default {
+  data () {
+    return {
+      isLoading: true,
+      exiting: false
+    }
+  },
+  mounted () {
+    this.loadingTimer()
+  },
+  methods: {
+    loadingTimer () {
+      window.setTimeout(() => {
+        this.isLoading = false
+      }, 2000)
+      window.setTimeout(() => {
+        this.exiting = true
+      }, 1500)
+    }
+  }
 }
+</script>
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
+<style scoped>
+  .body {
+    /* height: 100vh; */
+    max-height: 100vh;
+    max-width: 100vw;
+  }
+  .container {
+    padding: 0 10vw;
+  }
+  .ellipse {
+    display: none;
+    top: 0%;
+    opacity: 0.6;
+    left: 0%;
+    position: absolute;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+  .ellipse.one img {
+    width: 300px;
+    /* background: #000; */
+    animation: gallavant 10s forwards infinite;
+  }
+  .ellipse.two img {
+    width: 300px;
+    animation: gallavant 10s forwards infinite;
+  }
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .logo {
+    height: 50px;
+    width: 160px;
+    justify-content: flex-start;
+    background: url('~assets/bitmaps/header-logo.png') no-repeat left;
+  }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
+  @keyframes gallavant {
+    0% {
+      margin-left: 0px;
+      margin-top: 0px;
+      transform: scale(1.5);
+    }
+    30% {
+      margin-left: 100px;
+      margin-top: 200px;
+      transform: scale(1);
+    }
+    50% {
+      margin-left: 100px;
+      margin-top: 400px;
+      transform: scale(1.5);
+    }
+    75% {
+      margin-left: 300px;
+      margin-top: 200px;
+      transform: scale(1);
+    }
+    75% {
+      margin-left: 300px;
+      margin-top: 500px;
+      transform: scale(2.5);
+    }
+    100% {
+      margin-left: 0px;
+      margin-top: 0px;
+      transform: scale(1.5);
+    }
+  }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
+  @media screen and (max-width: 1024px) {
+    .container {
+      padding: 0 5vw;
+    }
+  }
 </style>

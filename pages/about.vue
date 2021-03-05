@@ -1,0 +1,134 @@
+<template>
+  <div class="about-container">
+    <div class="image fadein">
+      <div class="ndubuisi" />
+      <!-- <div class="content-body">
+        I tried modelling the guy in the <b>homepage</b> into some caricature.
+      </div> -->
+    </div>
+    <div class="content">
+      <div class="content-header">
+        The Stuff
+      </div>
+      <div class="content-body">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente accusantium necessitatibus deleniti facilis consequatur illo nostrum impedit tempora ipsa quae! Consequatur nobis obcaecati animi minus voluptate minima dolor beatae ipsa ipsum aliquam magnam, sunt nihil ab sequi doloremque amet autem mollitia itaque voluptatem accusantium libero illum rerum atque distinctio? Culpa distinctio dicta ipsam officiis? Labore sapiente cumque in illo non aspernatur distinctio libero amet! Officia, sapiente! Ea animi explicabo provident sequi quasi pariatur tempora deserunt doloremque beatae suscipit quisquam ullam minima sapiente vitae fuga incidunt nobis, maiores omnis ab. Necessitatibus corrupti, temporibus aspernatur nesciunt repellat fugiat quam dolores modi eligendi!
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style scoped>
+ .about-container {
+   display: flex;
+   justify-content: space-around;
+   height: 72vh;
+   margin: 4vh 0;
+ }
+ .image {
+   flex-basis: 30%;
+ }
+ .image .content-body {
+   width: 300px;
+ }
+ .ndubuisi {
+   margin-top: 5vh;
+   width: 300px;
+   height: 300px;
+   background: url('~assets/bitmaps/ndubuisi.png') no-repeat;
+   background-size: cover;
+   border: 10px solid;
+   transition: .5s;
+   border-radius: 24px;
+ }
+ .content {
+   flex-basis: 60%;
+   max-height: 65vh;
+   overflow-y: auto;
+ }
+ .content-header {
+    margin-top: 36px;
+    margin-bottom: 16px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 23px;
+ }
+ .content-body {
+    margin-top: 8px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 35px;
+ }
+
+  @media screen and (max-width: 1024px) {
+    /* .image {
+      flex-basis: 30%;
+    } */
+    .ndubuisi {
+      margin-top: 10vh;
+      width: 230px;
+      height: 230px;
+      background: url('~assets/bitmaps/ndubuisi.png') no-repeat;
+      background-size: cover;
+      border: 7px solid;
+    }
+    .image .content-body {
+      width: 230px;
+    }
+    .image img {
+      width: 100%;
+    }
+    .content-header {
+        margin-top: 36px;
+        margin-bottom: 16px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 23px;
+    }
+    .content-body {
+        margin-top: 8px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 35px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .image {
+      flex-basis: 30%;
+    }
+    .ndubuisi {
+      margin-top: 10vh;
+      width: 180px;
+      height: 180px;
+      background: url('~assets/bitmaps/ndubuisi.png') no-repeat;
+      background-size: cover;
+      border: 7px solid;
+      transition: .5s;
+    }
+    .image .content-body {
+      width: 180px;
+    }
+    .image img {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .about-container {
+      flex-direction: column;
+    }
+    .ndubuisi {
+      margin: 0;
+    }
+  }
+</style>
