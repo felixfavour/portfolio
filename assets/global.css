@@ -7,6 +7,11 @@ body {
   font-family: 'Graphik', sans-serif;
   background-color: #FFDEAC;
 }
+.clear-btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
 
 /* Scroll bar custom styling */
 ::-webkit-scrollbar {
@@ -75,6 +80,50 @@ body {
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
+}
+}
+.sidebarEnter {
+  animation: revealSidebar .3s forwards;
+  -webkit-animation: revealSidebar .3s forwards;
+}
+.sidebarExit {
+  animation: closeSidebar .3s forwards;
+  -webkit-animation: closeSidebar .3s forwards;
+}
+@keyframes revealSidebar {
+  0% {
+    opacity: 1;
+    transform: translateX(-100vw);
+    -webkit-transform: translateX(-100vw);
+    -moz-transform: translateX(-100vw);
+    -ms-transform: translateX(-100vw);
+    -o-transform: translateX(-100vw);
+}
+    100% {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+}
+@keyframes closeSidebar {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+    100% {
+    opacity: 1;
+    transform: translateX(-100vw);
+    -webkit-transform: translateX(-100vw);
+    -moz-transform: translateX(-100vw);
+    -ms-transform: translateX(-100vw);
+    -o-transform: translateX(-100vw);
 }
 }
 @keyframes comeup {

@@ -14,7 +14,7 @@
         <div :visibility="texts[2] !== undefined" class="text text-3 fadein">
           Helping people with efficient and intuitive computer software has always been the dream. These days I live 'the dream' at <a target="_blank" href="http://acumen.digital">Acumen Digital</a>
         </div>
-        <div class="button">
+        <a href="mailto:felixfavour0@gmail.com" class="button">
           <button>
             <div class="text">
               Say Hello!
@@ -23,7 +23,7 @@
           <div class="material-icons">
             arrow_forward
           </div>
-        </div>
+        </a>
       </div>
       <div class="image">
         <div class="personal-image-sill" />
@@ -104,20 +104,21 @@ export default {
 }
 .text-1 {
   font-style: normal;
-  font-weight: 300;
+  font-weight: normal;
   font-size: 22px;
   line-height: 40px;
 }
 .text-2 {
   margin: 12px 0;
   font-style: normal;
-  font-weight: 500;
+  font-weight: bolder;
   font-size: 64px;
   line-height: 70px;
 }
 .text-2.below {
   margin-top: 0;
   color: #9E5F00;
+  font-weight: 500;
 }
 .text a {
   color: #9E5F00;
@@ -177,15 +178,11 @@ button:hover + .material-icons {
 
 @media screen and (max-width: 1024px) {
 .text-1 {
-  font-style: normal;
-  font-weight: 300;
   font-size: 18px;
   line-height: 40px;
 }
 .text-2 {
   margin: 0;
-  font-style: normal;
-  font-weight: 500;
   font-size: 44px;
   font-size: 34px;
   line-height: 55px;
@@ -194,8 +191,6 @@ button:hover + .material-icons {
   margin-top: 0;
 }
 .text-3 {
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   width: 400px;
   line-height: 33px;
@@ -225,15 +220,11 @@ button:hover + .material-icons {
   margin: 0;
 }
 .text-1 {
-  font-style: normal;
-  font-weight: 300;
   font-size: 18px;
   line-height: 40px;
 }
 .text-2 {
   margin: 0;
-  font-style: normal;
-  font-weight: 500;
   font-size: 44px;
   font-size: 34px;
   line-height: 55px;
@@ -242,8 +233,6 @@ button:hover + .material-icons {
   margin-top: 0;
 }
 .text-3 {
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   width: 400px;
   line-height: 33px;
@@ -275,22 +264,35 @@ button:hover + .material-icons {
 }
 .banner .image {
   display: none;
+  opacity: 0.07;
+  position: absolute;
+  right: 150px;
+  top: 30vh;
+}
+.banner .personal-image {
+  width: 150px;
+  height: 227px;
+  background: url('~assets/bitmaps/banner-2-min.png') no-repeat cover;
+}
+.banner .personal-image-sill {
+  position: absolute;
+  width: 150px;
+  height: 227px;
+  background: url('~assets/bitmaps/banner-2-sill.png') no-repeat cover;
+  transform: translate(-35px, 10px);
 }
 .text-1 {
-  font-style: normal;
-  font-weight: 300;
   font-size: 15px;
-  line-height: 40px;
+  line-height: 15px;
 }
 .text-2 {
   margin: 0;
-  font-style: normal;
-  font-weight: 500;
   font-size: 34px;
   line-height: 55px;
 }
 .text-2.below {
   margin-top: 0;
+  line-height: 45px;
 }
 .text-3 {
   font-style: normal;

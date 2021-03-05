@@ -6,7 +6,7 @@
         I tried modelling the guy in the <b>homepage</b> into some caricature.
       </div> -->
     </div>
-    <div class="content">
+    <div class="content fadein">
       <div class="content-header">
         The Stuff
       </div>

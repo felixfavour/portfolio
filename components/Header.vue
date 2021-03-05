@@ -1,13 +1,7 @@
 <template>
   <div class="header-container">
     <a class="logo" href="/" />
-    <div v-show="!headerVisible" class="material-icons close" @click="headerVisible = true">
-      menu
-    </div>
     <div class="nav-actions">
-      <div class="material-icons close" @click="headerVisible = false">
-        close
-      </div>
       <div class="action">
         <nuxt-link :class="($route.name === 'index' ? 'active' : '')" to="/">
           Home
@@ -72,8 +66,8 @@ export default {
     display: flex;
     padding: 0 10vw;
   }
-  .material-icons.close {
-    display: none;
+  .material-icons {
+    margin-left: 4px;
   }
   .logo {
     height: 50px;
@@ -82,7 +76,7 @@ export default {
     background: url('~assets/bitmaps/header-logo.png') no-repeat left;
   }
   .nav-actions {
-    flex-basis: 60%;
+    flex-basis: 45%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -125,45 +119,5 @@ export default {
   } */
   .action a span {
     margin-left: 4px;
-  }
-
-  @media screen and (max-width: 1024px) {
-    .material-icons.close {
-      display: block;
-      font-size: 24px;
-    }
-    .header-container {
-      /* flex-direction: column; */
-      padding: 0 5vw;
-    }
-    .logo {
-      width: 100%;
-      flex-basis: 100%;
-    }
-    .nav-actions {
-      flex-basis: 0%;
-      padding: 32px;
-      display: none;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-end;
-      background: #DE8500;
-      z-index: 999;
-      position: absolute;
-      width: 300px;
-      height: 100vh;
-      right: 0;
-      bottom: 0;
-      top: 0;
-      animation: fromright .5s forwards;
-    }
-    .nav-actions .action {
-      margin: 32px 0;
-      /* border-bottom: 1px solid #FFF; */
-    }
-    .nav-actions .action a {
-      font-size: 24px;
-      color: #FFF;
-    }
   }
 </style>

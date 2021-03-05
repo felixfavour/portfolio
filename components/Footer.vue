@@ -1,16 +1,16 @@
 <template>
   <div class="footer-container">
     <div class="footer-socials">
-      <a target="_blank" href="https://github.com/felixfavour">
+      <a target="blank" href="https://github.com/felixfavour">
         <img src="~assets/icons/github.svg" alt="">
       </a>
-      <a target="_blank" href="https://linkedin.com/in/favour-felix-81b074b3/">
+      <a target="blank" href="https://linkedin.com/in/favour-felix-81b074b3/">
         <img src="~assets/icons/linkedin.svg" alt="">
       </a>
-      <a target="_blank" href="https://stackoverflow.com/users/11257434/favour-felix-chinemerem">
+      <a target="blank" href="https://stackoverflow.com/users/11257434/favour-felix-chinemerem">
         <img src="~assets/icons/so.svg" alt="">
       </a>
-      <a target="_blank" href="https://dribbble.com/raphfelix">
+      <a target="blank" href="https://dribbble.com/raphfelix">
         <img src="~assets/icons/dribble.svg" alt="">
       </a>
     </div>
@@ -35,6 +35,7 @@ export default {
 
 <style scoped>
   .footer-container {
+    /* background-color: #FFDEAC; */
     height: 8vh;
     justify-content: space-between;
     align-items: center;
@@ -87,6 +88,21 @@ export default {
     }
   }
 
+  @media screen and (max-width: 768px) {
+    .footer-socials {
+      flex-basis: 30%;
+    }
+    .footer-contact {
+      flex-basis: 70%;
+    }
+    .footer-socials img {
+      width: 20px;
+    }
+    .footer-contact a, .footer-contact span {
+      font-size: 15px;
+    }
+  }
+
   @media screen and (max-width: 500px) {
     .footer-container {
       flex-direction: column;
@@ -101,7 +117,6 @@ export default {
       margin: 0 12px;
     }
     .footer-contact a {
-      font-size: 15px;
       display: none;
     }
     .bar {
