@@ -10,6 +10,10 @@
       <div class="ellipse two">
         <img src="~assets/bitmaps/ellipse2.png">
       </div>
+      <div v-show="false" class="image">
+        <div class="personal-image-sill" />
+        <div class="personal-image" />
+      </div>
       <!-- <div class="ellipse three">
         <img src="~assets/bitmaps/ellipse1.png">
       </div>
@@ -33,10 +37,11 @@ export default {
     return {
       isLoading: true,
       exiting: false,
-      screenWidth: 768
+      screenWidth: 0
     }
   },
   mounted () {
+    this.screenWidth = window.screen.availWidth
     this.onResize()
     this.loadingTimer()
   },
@@ -138,5 +143,24 @@ export default {
     .container {
       padding: 0 5vw;
     }
+  }
+
+  /* LOAD IMAGE BEFORE INDEX */
+
+  .personal-image {
+    width: 350px;
+    position: absolute;
+    height: 550px;
+    background: url('~assets/bitmaps/banner-2-min.png') no-repeat;
+    filter: drop-shadow(0px 38px 56px rgba(0, 0, 0, 0.25));
+  }
+  .personal-image-sill {
+    width: 350px;
+    height: 550px;
+    background: url('~assets/bitmaps/banner-2-sill.png') no-repeat;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 38px 56px rgba(0, 0, 0, 0.25));
+    transform: translate(-35px, 10px);
+    animation: reveal 1s forwards;
   }
 </style>
