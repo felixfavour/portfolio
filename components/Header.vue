@@ -2,30 +2,31 @@
   <div class="header-container">
     <a class="logo" href="/" />
     <div class="nav-actions">
+      <div class="bar" />
       <div class="action">
         <nuxt-link :class="($route.name === 'index' ? 'active' : '')" to="/">
           Home
         </nuxt-link>
-        <div class="bar home" />
+        <!-- <div class="bar home" /> -->
       </div>
       <div class="action">
         <nuxt-link :class="($route.name === 'about' ? 'active' : '')" to="/about">
           About Me
         </nuxt-link>
-        <div class="bar about" />
+        <!-- <div class="bar about" /> -->
       </div>
       <div class="action">
         <nuxt-link :class="($route.name === 'fieldtrips' ? 'active' : '')" to="/fieldtrips">
           Field Trips
         </nuxt-link>
-        <div class="bar trips" />
+        <!-- <div class="bar trips" /> -->
       </div>
       <div class="action">
         <a target="_blank" href="https://stories.favourfelix.com">
           My Stories
           <span class="material-icons">call_made</span>
         </a>
-        <div class="bar trips" />
+        <!-- <div class="bar trips" /> -->
       </div>
       <div class="action">
         <a style="color: #DE8500" target="_blank" href="https://1drv.ms/b/s!AmKSIfAstaFL2DFR54DLXMviQzum">
@@ -106,13 +107,15 @@ export default {
     animation: fadein .3s;
     border-radius: 16px;
   }
-  .action a:hover + .bar {
+  .action a:hover {
     display: block;
     transition: .4s;
+    color: #DE8500;
   }
-  .action a.active + .bar {
+  .action a.active {
     display: block;
     transition: .4s;
+    color: #DE8500;
   }
   /* .action a:hover {
     border-bottom: 3px outset #DE8500;
