@@ -2,29 +2,75 @@
   <div class="ft-container">
     <div class="ft-header">
       <div :class="'active-state ' + mode" />
-      <button :class="(mode === 'wf' ? 'active' : '')" @click="mode = 'wf'">
-        Work
-      </button>
-      <button :class="'second ' + (mode === 'vf' ? 'active' : '')" @click="mode = 'vf'">
+      <button title="Personal Projects" :class="(mode === 'wf' ? 'active' : '')" @click="mode = 'wf'">
         Projects
+      </button>
+      <button title="Professional Experiences" :class="'second ' + (mode === 'vf' ? 'active' : '')" @click="mode = 'vf'">
+        Work
       </button>
     </div>
     <div class="ft-body">
       <div v-if="mode === 'wf'" class="field">
-        <button @click="scrollXNegative" class="move left">
+        <button class="move left" @click="scrollXNegative">
           <span class="material-icons">
             arrow_back_ios
           </span>
         </button>
         <div class="ft-card">
           <div class="card-image">
-            <img src="~assets/bitmaps/placeholder.png">
+            <img src="~assets/bitmaps/ff.png">
           </div>
           <div class="role">
-            Software Engineer, Google
+            Portfolio
           </div>
           <div class="year">
-            2004
+            2021
+          </div>
+          <div class="info">
+            This is my official portfolio, this is the first and only version. I hope to come up with better ideas and rebuild in the long run.
+          </div>
+        </div>
+        <div class="ft-card">
+          <div class="card-image">
+            <img src="~assets/bitmaps/ff.png">
+          </div>
+          <div class="role">
+            Okwudili Okonkwo & Co.
+          </div>
+          <div class="year">
+            2021
+          </div>
+          <div class="info">
+            Designed and Developed a website and blog for a legal firm in Nigeria.
+            <b><a target="_blank" href="https://okwudililegal.com">okwudilidlegal.com</a></b>
+          </div>
+        </div>
+        <div class="ft-card">
+          <div class="card-image">
+            <img src="~assets/bitmaps/pidgipedia.png">
+          </div>
+          <div class="role">
+            Pidgipedia
+          </div>
+          <div class="year">
+            2020
+          </div>
+          <div class="info">
+            Pidgipedia is an app that houses a network of linguists and non-linguists, as the linguists to contribute to a fast-rising vocabulary, Pidgin, the non-linguists get to use the app as a dictionary to better understand the language. Thereby creating a standard for the Pidgin Language and supporting the African/Nigerian Heritage. Pidgipedia is still in development.
+          </div>
+        </div>
+        <div class="ft-card">
+          <div class="card-image">
+            <img src="~assets/bitmaps/mobotithe.png">
+          </div>
+          <div class="role">
+            Mobotithe
+          </div>
+          <div class="year">
+            2019
+          </div>
+          <div class="info">
+            Mobotithe is an android application for keeping tab of Transactions (essentially, Incomes and Expenses) based on a specific interval provided by the user. Your data can be accessed via the internet/local storage
           </div>
         </div>
         <div class="ft-card">
@@ -32,46 +78,17 @@
             <img src="~assets/bitmaps/placeholder.png">
           </div>
           <div class="role">
-            Software Engineer, Google
+            Other Hobby Projects
           </div>
           <div class="year">
-            2004
+            2019
+          </div>
+          <div class="info">
+            There are plenty other projects to look at on
+            <b><a target="_blank" href="https://github.com/felixfavour">My Github Profile</a></b>
           </div>
         </div>
-        <div class="ft-card">
-          <div class="card-image">
-            <img src="~assets/bitmaps/placeholder.png">
-          </div>
-          <div class="role">
-            Software Engineer, Google
-          </div>
-          <div class="year">
-            2004
-          </div>
-        </div>
-        <div class="ft-card">
-          <div class="card-image">
-            <img src="~assets/bitmaps/placeholder.png">
-          </div>
-          <div class="role">
-            Software Engineer, Google
-          </div>
-          <div class="year">
-            2004
-          </div>
-        </div>
-        <div class="ft-card">
-          <div class="card-image">
-            <img src="~assets/bitmaps/placeholder.png">
-          </div>
-          <div class="role">
-            Software Engineer, Google
-          </div>
-          <div class="year">
-            2004
-          </div>
-        </div>
-        <button @click="scrollX" class="move right">
+        <button class="move right" @click="scrollX">
           <span class="material-icons">
             arrow_forward_ios
           </span>
@@ -80,16 +97,16 @@
       <div v-if="mode === 'vf'" class="field">
         <div class="ft-card">
           <div class="card-image">
-            <img src="~assets/bitmaps/placeholder.png">
+            <img src="~assets/bitmaps/acumen.png">
           </div>
           <div class="role">
-            Software Engineer, Google
+            Software Engineer, <b>Acumen Digital</b>
           </div>
           <div class="year">
-            2004
+            2020
           </div>
         </div>
-        <div class="ft-card">
+        <!-- <div class="ft-card">
           <div class="card-image">
             <img src="~assets/bitmaps/placeholder.png">
           </div>
@@ -99,7 +116,7 @@
           <div class="year">
             2004
           </div>
-        </div>
+        </div> -->
         <!-- <button class="move-right">
           <span class="material-icons">
             arrow_right
@@ -131,6 +148,17 @@ export default {
 </script>
 
 <style scoped>
+  .info {
+    margin-top: 16px;
+    line-height: 28px;
+  }
+  .ft-card a {
+    text-decoration: none;
+    color: #DE8500;
+  }
+  .ft-card a:hover {
+    border-bottom: 1px solid;
+  }
   .ft-header {
     position: relative;
     margin-top: 24px;
@@ -210,12 +238,15 @@ export default {
   }
   .field .ft-card {
     width: 400px;
-    height: 410px;
+    height: 550px;
     margin-right: 36px;
     animation: fromright 1s forwards;
   }
   .field .ft-card img {
     width: 400px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 24px;
   }
   .ft-card .role {
     margin-top: 24px;

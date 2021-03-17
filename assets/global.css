@@ -43,7 +43,7 @@ body {
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #DE8500;
+  background-color: #000;
 }
 
 /* Animations */
