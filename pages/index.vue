@@ -176,6 +176,50 @@ button:hover + .material-icons {
   }
 }
 
+@media screen and (max-width: 1440px) {
+.text-1 {
+  font-size: 16px;
+  line-height: 40px;
+}
+.text-2 {
+  margin: 0;
+  font-size: 44px;
+  line-height: 55px;
+}
+.text-2.below {
+  margin-top: 0;
+}
+.text-3 {
+  font-size: 16px;
+  width: 400px;
+  line-height: 33px;
+}
+.banner button {
+  margin-top: 38px;
+}
+.material-icons {
+  top: 50px;
+}
+.button .text {
+  font-size: 15px;
+}
+.banner > .image {
+  margin-top: 50px;
+}
+.banner .personal-image {
+  width: 260px;
+  height: 380px;
+  background-size: cover;
+  z-index: -1
+}
+.banner .personal-image-sill {
+  width: 260px;
+  height: 380px;
+  background-size: cover;
+  z-index: -1;
+}
+}
+
 @media screen and (max-width: 1024px) {
 .text-1 {
   font-size: 18px;

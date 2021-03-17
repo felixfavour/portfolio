@@ -69,6 +69,7 @@ export default {
   }
   .material-icons {
     margin-left: 4px;
+    font-size: 18px;
   }
   .logo {
     height: 50px;
@@ -108,12 +109,10 @@ export default {
     border-radius: 16px;
   }
   .action a:hover {
-    display: block;
     transition: .4s;
     color: #DE8500;
   }
   .action a.active {
-    display: block;
     transition: .4s;
     color: #DE8500;
   }
@@ -122,5 +121,21 @@ export default {
   } */
   .action a span {
     margin-left: 4px;
+  }
+
+  @media screen and (max-width: 1440px) {
+    .nav-actions {
+      flex-basis: 50%;
+    }
+    .action a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      transition: .4s;
+      justify-content: center;
+      font-weight: 400;
+      font-size: 16px;
+      color: #000;
+    }
   }
 </style>
