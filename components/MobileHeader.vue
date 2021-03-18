@@ -216,4 +216,32 @@ export default {
     width: 0%;
     left: 50%;
   }
+
+  @media screen and (max-width: 500px) {
+    .logo {
+      height: 20px;
+      width: 50%;
+      flex-basis: 50%;
+    }
+    .logo img {
+      width: 110px;
+    }
+    .hamburger span {
+      height: 1px;
+    }
+    .hamburger span:nth-child(1) {
+      left: 20%;
+      width: 80%;
+    }
+    .hamburger span:nth-child(2),.hamburger span:nth-child(3) {
+      top: 8px;
+      width: 65%;
+      left: 35%;
+    }
+    .hamburger span:nth-child(4) {
+      top: 16px;
+      width: 55%;
+      left: 45%;
+    }
+  }
 </style>
