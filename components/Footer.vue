@@ -41,12 +41,12 @@ export default {
     align-items: center;
     display: flex;
     /* padding: 0 10vw; */
-    position: fixed;
+    /* position: fixed;
     z-index: -1;
     width: 100%;
     bottom: 0;
     right: 0;
-    left: 0;
+    left: 0; */
   }
   .footer-socials {
     flex-basis: 40%;

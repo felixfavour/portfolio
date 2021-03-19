@@ -1,6 +1,6 @@
 <template>
   <div class="body">
-    <div v-if="!isLoading" class="main">
+    <div v-show="!isLoading" class="main">
       <QuotePurger v-if="false" />
       <Header v-if="screenWidth > 1024" class="fadedown" />
       <MobileHeader v-if="screenWidth <= 1024" class="fadedown" />
@@ -25,7 +25,7 @@
       </div>
       <Footer class="fadein" />
     </div>
-    <div v-else class="loader">
+    <div v-show="isLoading" class="loader">
       <div :class="'logo fadein ' + (exiting ? 'zoomout' : '')" />
     </div>
   </div>
@@ -71,7 +71,7 @@ export default {
   }
   .container {
     padding: 0 10vw;
-    height: 76vh;
+    min-height: 80vh;
   }
   .ellipse {
     display: none;

@@ -10,7 +10,7 @@
       </button>
     </div>
     <div class="ft-body">
-      <div v-if="mode === 'wf'" class="field">
+      <div v-show="mode === 'wf'" class="field">
         <button class="move left" @click="scrollXNegative">
           <span class="material-icons">
             arrow_back_ios
@@ -94,7 +94,7 @@
           </span>
         </button>
       </div>
-      <div v-if="mode === 'vf'" class="field">
+      <div v-show="mode === 'vf'" class="field">
         <div class="ft-card">
           <div class="card-image">
             <img src="~assets/bitmaps/acumen.png">
@@ -137,11 +137,11 @@ export default {
   methods: {
     scrollX () {
       const field = document.querySelector('div.ft-body > div')
-      field.scrollBy(800, 0)
+      field.scrollBy(300, 0)
     },
     scrollXNegative () {
       const field = document.querySelector('div.ft-body > div')
-      field.scrollBy(-800, 0)
+      field.scrollBy(-300, 0)
     }
   }
 }
@@ -161,8 +161,8 @@ export default {
   }
   .ft-header {
     position: relative;
-    margin-top: 24px;
-    height: 100px;
+    padding-top: 24px;
+    height: 70px;
   }
   .active-state {
     width: 150px;
@@ -196,6 +196,14 @@ export default {
     background-color: transparent;
     border: none;
     cursor: pointer;
+  }
+  ::-webkit-scrollbar {
+    width: 0;
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #DE8500;
   }
   /* .ft-header button.active {
     background: #DE8500;
@@ -238,7 +246,7 @@ export default {
   }
   .field .ft-card {
     width: 400px;
-    height: 550px;
+    /* height: 550px; */
     margin-right: 36px;
     animation: fromright 1s forwards;
   }

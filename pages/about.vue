@@ -48,7 +48,7 @@ export default {
    display: flex;
    justify-content: space-around;
    height: 72vh;
-   margin: 4vh 0;
+   padding: 4vh 0;
  }
  .image {
    flex-basis: 30%;
