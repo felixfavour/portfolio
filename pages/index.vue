@@ -40,6 +40,18 @@ export default {
       texts: []
     }
   },
+  head () {
+    return {
+      title: 'Favour Felix',
+      meta: [
+        {
+          name: 'description',
+          content:
+            'This is the official portfolio of Favour Felix. I enjoy building software, helping people with efficient and intuitive computer software has always been the dream. These days I live the dream at Acumen Digital'
+        }
+      ]
+    }
+  },
   mounted () {
     // console.log(this.texts[0])
     // this.textSequentialAnimator()
