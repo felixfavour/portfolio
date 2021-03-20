@@ -39,7 +39,18 @@
 
 <script>
 export default {
-
+  head () {
+    return {
+      title: 'Favour Felix: In depth',
+      meta: [
+        {
+          name: 'description',
+          content:
+            'This is the official portfolio of Favour Felix. I like to believe I have a very interesting personality, click to find out more.'
+        }
+      ]
+    }
+  }
 }
 </script>
 

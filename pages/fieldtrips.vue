@@ -134,6 +134,18 @@ export default {
       mode: 'wf'
     }
   },
+  head () {
+    return {
+      title: 'Favour Felix: Experiences',
+      meta: [
+        {
+          name: 'description',
+          content:
+            'In my journey of over three years "pressing computer", I have successfully picked up a lot of skills on my way and mastered a few. Click to see all of my experiences as a Software Engineer and as a hobby designer.'
+        }
+      ]
+    }
+  },
   methods: {
     scrollX () {
       const field = document.querySelector('div.ft-body > div')
@@ -328,6 +340,7 @@ export default {
   @media screen and (max-width: 350px) {
     .ft-header button  {
       font-size: 15px;
+      font-weight: 500;
     }
     .active-state, .ft-header button {
       width: 100px;

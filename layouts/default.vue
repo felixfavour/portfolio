@@ -4,16 +4,6 @@
       <QuotePurger v-if="false" />
       <Header v-if="screenWidth > 1024" class="fadedown" />
       <MobileHeader v-if="screenWidth <= 1024" class="fadedown" />
-      <div class="ellipse one">
-        <img src="~assets/bitmaps/ellipse1.png">
-      </div>
-      <div class="ellipse two">
-        <img src="~assets/bitmaps/ellipse2.png">
-      </div>
-      <div v-show="false" class="image">
-        <div class="personal-image-sill" />
-        <div class="personal-image" />
-      </div>
       <!-- <div class="ellipse three">
         <img src="~assets/bitmaps/ellipse1.png">
       </div>
@@ -27,6 +17,12 @@
     </div>
     <div v-show="isLoading" class="loader">
       <div :class="'logo fadein ' + (exiting ? 'zoomout' : '')" />
+      <div v-show="false" class="image">
+        <img src="~assets/bitmaps/banner-2-min.png" alt="">
+        <img src="~assets/bitmaps/banner-2-sill.png" alt="">
+        <div class="personal-image-sill" />
+        <div class="personal-image" />
+      </div>
     </div>
   </div>
 </template>
