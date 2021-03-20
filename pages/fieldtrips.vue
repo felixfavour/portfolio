@@ -56,7 +56,7 @@
             2020
           </div>
           <div class="info">
-            Pidgipedia is an app that houses a network of linguists and non-linguists, as the linguists to contribute to a fast-rising vocabulary, Pidgin, the non-linguists get to use the app as a dictionary to better understand the language. Thereby creating a standard for the Pidgin Language and supporting the African/Nigerian Heritage. Pidgipedia is still in development.
+            Pidgipedia is an app that houses a network of linguists and non-linguists, contributing to a fast-rising vocabulary, Pidgin, the non-linguists get to use the app as a dictionary. Pidgipedia creates a standard for the Pidgin Language and supports the African/Nigerian Heritage.
           </div>
         </div>
         <div class="ft-card">
@@ -221,7 +221,7 @@ export default {
     display: -moz-box;
     display: -webkit-box;
     width: 80vw;
-    overflow-x: auto;
+    overflow-x: hidden;
   }
   .move {
     animation: zoomin .5s forwards;
@@ -303,6 +303,28 @@ export default {
     }
   }
 
+  @media screen and (max-width: 500px) {
+    .move {
+      margin-top: 120px;
+    }
+    .field {
+      /* overflow-x: auto; */
+    }
+    .field .ft-card img {
+      width: 270px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 24px;
+    }
+  }
+
+  @media screen and (max-height: 700px) {
+    .field {
+      padding-bottom: 36px;
+    }
+
+  }
+
   @media screen and (max-width: 350px) {
     .ft-header button  {
       font-size: 15px;
@@ -312,6 +334,15 @@ export default {
     }
     .active-state.vf {
       transform: translateX(116px);
+    }
+    .field {
+      overflow-x: auto;
+    }
+    .field .ft-card img {
+      width: 270px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 24px;
     }
   }
 </style>

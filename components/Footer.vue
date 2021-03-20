@@ -57,6 +57,10 @@ export default {
     width: 30px;
     margin-right: 24px;
   }
+  .footer-socials a {
+    height: 100%;
+    display: inline-block;
+  }
   .footer-contact {
     flex-basis: 60%;
     display: flex;
@@ -106,7 +110,7 @@ export default {
   @media screen and (max-width: 500px) {
     .footer-container {
       flex-direction: column;
-      height: 10vh;
+      height: 12vh;
     }
     .footer-socials {
       padding: 8px 0;

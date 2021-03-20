@@ -82,7 +82,7 @@ export default {
   height: 100vh;
 }
   .header-container .main-header {
-    height: 10vh;
+    height: 8vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -98,7 +98,7 @@ export default {
     right: 0;
     left: 0;
     padding: 0 5vw;
-    top: 10vh;
+    top: 8vh;
     bottom: 0;
   }
   .nav-actions .action {

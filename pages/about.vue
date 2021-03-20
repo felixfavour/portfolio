@@ -72,6 +72,7 @@ export default {
  }
  .content {
    flex-basis: 60%;
+   margin-top: 24px;
    max-height: 65vh;
    overflow-y: auto;
  }
@@ -217,11 +218,34 @@ export default {
   }
 
   @media screen and (max-width: 500px) {
+    .large {
+      font-size: 20px;
+    }
     .about-container {
       flex-direction: column;
     }
+    .image {
+      flex-basis: 10%;
+    }
     .ndubuisi {
       margin: 0;
+      width: 200px;
+      height: 200px;
+      animation: reduceNdu 1s forwards;
+    }
+    .content {
+      flex-basis: auto;
+    }
+
+    @keyframes reduceNdu {
+      0% {
+        width: 200px;
+        height: 200px;
+      }
+      100% {
+        width: 100px;
+        height: 100px;
+      }
     }
   }
 </style>
