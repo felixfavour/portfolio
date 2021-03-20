@@ -13,6 +13,10 @@ body {
   background-color: transparent;
 }
 
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* Scroll bar custom styling */
 ::-webkit-scrollbar {
   width: 4px;
