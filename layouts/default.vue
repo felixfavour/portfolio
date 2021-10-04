@@ -18,6 +18,8 @@
     <div v-show="isLoading" class="loader">
       <div :class="'logo fadein ' + (exiting ? 'zoomout' : '')" />
       <div v-show="false" class="image">
+        <img src="~assets/bitmaps/ff.png" alt="">
+        <img src="~assets/bitmaps/ndubuisi.png" alt="">
         <img src="~assets/bitmaps/banner-2-min.png" alt="">
         <img src="~assets/bitmaps/banner-2-sill.png" alt="">
         <div class="personal-image-sill" />

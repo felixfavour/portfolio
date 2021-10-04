@@ -160,7 +160,7 @@ export default {
   .hamburger span {
     display: block;
     position: absolute;
-    height: 3px;
+    height: 5px;
     width: 100%;
     background: #9E5F00;
     border-radius: 9px;
@@ -227,7 +227,7 @@ export default {
       width: 110px;
     }
     .hamburger span {
-      height: 1px;
+      height: 4px;
     }
     .hamburger span:nth-child(1) {
       left: 20%;
