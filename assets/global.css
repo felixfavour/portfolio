@@ -1,4 +1,33 @@
-@import url('https://fonts.cdnfonts.com/css/graphik');
+
+@font-face {
+  font-family: "Graphik";
+  src: url(../assets/fonts/GraphikBold.otf); 
+  src: url(../assets/fonts/GraphikBold.otf) format("embedded-opentype"),
+  url(../assets/fonts/GraphikBold.otf) format("truetype");
+  font-weight: bolder;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url(../assets/fonts/GraphikSemibold.otf); 
+  src: url(../assets/fonts/GraphikSemibold.otf) format("embedded-opentype"),
+  url(../assets/fonts/GraphikSemibold.otf) format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url(../assets/fonts/GraphikMedium.otf); 
+  src: url(../assets/fonts/GraphikMedium.otf) format("embedded-opentype"),
+  url(../assets/fonts/GraphikMedium.otf) format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url(../assets/fonts/GraphikRegular.otf); 
+  src: url(../assets/fonts/GraphikRegular.otf) format("embedded-opentype"),
+  url(../assets/fonts/GraphikRegular.otf) format("truetype");
+  font-weight: normal;
+}
+
 * {
   scroll-behavior: smooth;
 }
