@@ -81,7 +81,7 @@
             Other Hobby Projects
           </div>
           <div class="year">
-            2019
+            2018
           </div>
           <div class="info">
             There are plenty other projects to look at on
