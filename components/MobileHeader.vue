@@ -11,39 +11,39 @@
         <span />
       </button>
     </div>
-    <div :class="'nav-actions ' + (hamOpen ? 'sidebarEnter' : 'sidebarExit')">
-      <div class="action">
+    <ul :class="'nav-actions ' + (hamOpen ? 'sidebarEnter' : 'sidebarExit')">
+      <li class="action">
         <nuxt-link :class="($route.name === 'index' ? 'active' : '')" to="/">
           Home
         </nuxt-link>
         <div class="bar home" />
-      </div>
-      <div class="action">
+      </li>
+      <li class="action">
         <nuxt-link :class="($route.name === 'about' ? 'active' : '')" to="/about">
           About Me
         </nuxt-link>
         <div class="bar about" />
-      </div>
-      <div class="action">
+      </li>
+      <li class="action">
         <nuxt-link :class="($route.name === 'fieldtrips' ? 'active' : '')" to="/fieldtrips">
           Field Trips
         </nuxt-link>
         <div class="bar trips" />
-      </div>
-      <div class="action">
+      </li>
+      <li class="action">
         <a target="_blank" href="https://stories.favourfelix.com">
           My Stories
           <span class="material-icons">call_made</span>
         </a>
         <div class="bar trips" />
-      </div>
-      <div class="action">
+      </li>
+      <li class="action">
         <a style="color: #FFDEAC" target="_blank" href="https://1drv.ms/b/s!AmKSIfAstaFL2DFR54DLXMviQzum">
           CV / Resume
           <span class="material-icons">cloud_download</span>
         </a>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -78,9 +78,12 @@ export default {
 </script>
 
 <style scoped>
-.header-container.fullHeight {
-  height: 100vh;
-}
+  ul {
+    list-style-type: none;
+  }
+  .header-container.fullHeight {
+    height: 100vh;
+  }
   .header-container .main-header {
     height: 8vh;
     display: flex;

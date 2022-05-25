@@ -1,14 +1,19 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Favour Felix',
+    title: 'Favour Felix - helping people with efficient and intuitive computer software.',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: '' },
+      {
+        name: 'description',
+        content:
+          'This is the official portfolio of Favour Felix. I enjoy building software, helping people with efficient and intuitive computer software has always been the dream. These days I live the dream at Acumen Digital'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

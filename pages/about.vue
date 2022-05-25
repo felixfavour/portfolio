@@ -13,9 +13,9 @@
       <div class="content-body">
         <span class="large">Hello! My name is Favour Felix,</span> I am a Software Engineer based in Lagos, Nigeria. I am also a wonderful designer, self-proclaimed anyways. As much as I love building <b>wonderful applications</b> on the web and on mobile, I am very passionate about <b>design</b>. I'm a firm believer of the fact that a User Interface should be beautiful and functional, emphasis on functional. <br> Most importantly, I am a <b>Christian</b>, I love to put God first in all of my dealings, and I hope people see that in the way I show love to anybody and everybody.
       </div>
-      <div class="content-header">
+      <h1 class="content-header">
         My Skills
-      </div>
+      </h1>
       <div class="content-body">
         In my journey of over three years "pressing computer", I have successfully picked up a lot of skills on my way and mastered a few.
         <div class="flex">

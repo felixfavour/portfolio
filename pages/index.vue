@@ -2,18 +2,18 @@
   <div class="home-container">
     <div class="banner">
       <div class="text">
-        <div class="text text-1 fadein">
+        <h1 class="text text-1 fadein">
           Hello, I am
-        </div>
-        <div :visibility="texts[0] !== undefined" class="text text-2 fadein">
+        </h1>
+        <h1 :visibility="texts[0] !== undefined" class="text text-2 fadein">
           Favour Felix
-        </div>
-        <div :visibility="texts[1] !== undefined" class="text text-2 fadein below">
+        </h1>
+        <h1 :visibility="texts[1] !== undefined" class="text text-2 fadein below">
           I enjoy building software.
-        </div>
-        <div :visibility="texts[2] !== undefined" class="text text-3 fadein">
+        </h1>
+        <h1 :visibility="texts[2] !== undefined" class="text text-3 fadein">
           Helping people with efficient and intuitive computer software has always been the dream. These days I live 'the dream' at <a target="_blank" href="http://acumen.digital">Acumen Digital</a>
-        </div>
+        </h1>
         <a href="mailto:felixfavour0@gmail.com" class="button">
           <button>
             <div class="text">
@@ -42,7 +42,7 @@ export default {
   },
   head () {
     return {
-      title: 'Favour Felix',
+      title: 'Favour Felix - helping people with efficient and intuitive computer software.',
       meta: [
         {
           name: 'description',
