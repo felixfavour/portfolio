@@ -13,6 +13,11 @@ export default {
         name: 'description',
         content:
           'This is the official portfolio of Favour Felix. I enjoy building software, helping people with efficient and intuitive computer software has always been the dream. These days I live the dream at Acumen Digital'
+      },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content: 'https://firebasestorage.googleapis.com/v0/b/favour-portfolio.appspot.com/o/favour-felix.jpg?alt=media&token=903343a2-0823-4383-9b9f-3ad1cad45180'
       }
     ],
     link: [
